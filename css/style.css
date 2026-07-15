@@ -220,6 +220,15 @@ main { flex: 1; overflow: hidden; display: flex; }
 .teacher-controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
 .teacher-controls input { border: 2px solid #b0bec5; border-radius: 8px; padding: 8px 10px; font-size: 14px; }
 .teacher-log { max-height: 340px; min-height: 140px; }
+.teacher-lock { max-width: 420px; }
+#teacher-lock-form { display: flex; gap: 8px; margin-top: 8px; }
+#teacher-lock-form input {
+  flex: 1; border: 2px solid #b0bec5; border-radius: 8px;
+  padding: 8px 10px; font-size: 15px; min-width: 0;
+}
+.lock-error { color: #c62828; font-weight: bold; font-size: 13.5px; min-height: 1.2em; margin: 8px 0 0; }
+#teacher-content { display: flex; flex-direction: column; gap: 14px; }
+#teacher-content[hidden] { display: none; }
 
 /* ---------- トースト ---------- */
 .toast {

@@ -167,6 +167,19 @@
 <section id="tab-teacher" class="tab-panel">
   <div class="teacher-wrap">
     <h2>先生用ツール</h2>
+
+    <!-- パスコードガード(抑止用の簡易ガード。本格的なセキュリティではない) -->
+    <div id="teacher-lock" class="learn-card teacher-lock">
+      <h3>🔒 このタブは先生用です</h3>
+      <p>パスコードを入力してください。</p>
+      <form id="teacher-lock-form">
+        <input id="teacher-pass" type="password" maxlength="30" placeholder="パスコード" autocomplete="off">
+        <button type="submit" class="btn btn-primary">ひらく</button>
+      </form>
+      <p id="teacher-lock-error" class="lock-error"></p>
+    </div>
+
+    <div id="teacher-content" hidden>
     <div class="learn-card">
       <h3>部屋モニター</h3>
       <p>部屋コードを入力すると、その部屋のメッセージをリアルタイムで見られます(巡回指導用)。</p>
@@ -183,6 +196,7 @@
       <p id="setup-status"></p>
       <p class="note">Firebaseの設定方法・授業の流れは、リポジトリ内の <code>docs/teacher-guide.md</code> を参照してください。</p>
     </div>
+    </div><!-- /#teacher-content -->
   </div>
 </section>
 

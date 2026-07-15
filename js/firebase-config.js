@@ -8,6 +8,12 @@
 // 貼り付けていない間は「練習モード」(通信なし・ボット相手)で動きます。
 // ============================================================
 
+// ---- 先生用タブのパスコード ----
+// ④先生用タブを開くときに入力を求める合言葉です。自由に変更してください。
+// ※これは生徒のいたずら抑止用の「簡易ガード」です。ページのソースを見れば
+//   分かってしまうため、本格的なセキュリティではありません。
+window.TEACHER_PASSCODE = "sensei";
+
 window.FIREBASE_CONFIG = {
   apiKey: "AIzaSyAszd8oHhKp6kbABGOdvgicXDH91TJoSZs",
   authDomain: "hmworks2-80327.firebaseapp.com",

@@ -556,6 +556,36 @@ showMission(0);
 // ============================================================
 // ④ 先生用
 // ============================================================
+
+// ---- 簡易パスコードガード ----
+// ※生徒のいたずら抑止用の「簡易ガード」です。ソースコードを読めば分かるため、
+//   本格的なセキュリティではありません。データの保護はFirebaseのルールで行います。
+//   パスコードは js/firebase-config.js の TEACHER_PASSCODE で変更できます。
+{
+  const PASS = String(window.TEACHER_PASSCODE || "");
+  const OK_KEY = "tws-teacher-ok";
+  const unlock = () => {
+    $("teacher-lock").hidden = true;
+    $("teacher-content").hidden = false;
+  };
+  if (!PASS || sessionStorage.getItem(OK_KEY) === "1") {
+    // パスコード未設定ならガードなし。正解済み(同じタブ内)なら再入力不要
+    unlock();
+  }
+  $("teacher-lock-form").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    if ($("teacher-pass").value === PASS) {
+      sessionStorage.setItem(OK_KEY, "1");
+      $("teacher-lock-error").textContent = "";
+      unlock();
+    } else {
+      $("teacher-lock-error").textContent = "パスコードが違います";
+      $("teacher-pass").value = "";
+      $("teacher-pass").focus();
+    }
+  });
+}
+
 let teacherUnwatch = null;
 const teacherEntries = [];
 
