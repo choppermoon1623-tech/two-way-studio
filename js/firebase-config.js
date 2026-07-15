@@ -9,11 +9,11 @@
 // ============================================================
 
 window.FIREBASE_CONFIG = {
-  apiKey: "ここにapiKeyを貼り付け",
-  authDomain: "ここにauthDomainを貼り付け",
-  databaseURL: "ここにdatabaseURLを貼り付け",
-  projectId: "ここにprojectIdを貼り付け",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
+  apiKey: "AIzaSyAszd8oHhKp6kbABGOdvgicXDH91TJoSZs",
+  authDomain: "hmworks2-80327.firebaseapp.com",
+  databaseURL: "https://hmworks2-80327-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "hmworks2-80327",
+  storageBucket: "hmworks2-80327.firebasestorage.app",
+  messagingSenderId: "530113459747",
+  appId: "1:530113459747:web:6f31a41caf644a3757a396"
 };
